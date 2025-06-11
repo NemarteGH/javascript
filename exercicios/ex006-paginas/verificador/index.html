@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+
+                <p>Ano de nascimento<input id="nascimento" type="number" min="0"></p>
+
+                <p> Sexo:
+                    <!-- O nome radsex precisa ser igual nos dois inputs do tipo radio, casso contrário ambos ficam selecionados ao mesmo tempo. -->
+
+                    <input name="radsex" id="masculino" type="radio" checked>
+                    <label for="masculino">Masculino</label>
+
+                    <input name="radsex" id="feminino" type="radio">
+                    <label for="feminino">Feminino</label>
+                </p>
+
+                <p><button onclick="verificar()">Verificar</button></p>
+
+            </div>
+            <div id="resultado">
+                <p>Preencha os dados acima para ver o resultado!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="https://github.com/NeMarteGH">@NeMarteGH</a></p>
+    </footer>
+
+</body>
+</html>
