@@ -24,16 +24,17 @@ section{
     margin: auto;
     padding: 20px;
     background-color: white;
-    max-width: 500px;
+    max-width: 350px;
     border-radius: 15px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.473);
     font-size:1.3em;
 }
 
 section button{
-    font-size: 1em;
+    font-size: 0.8em;
     border-color: black;
-    margin-left: 10px;
+    margin-bottom: 15px;
+    
 }
 
 section button:hover{
@@ -53,17 +54,22 @@ footer{
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
 }
 
-div#resultado img{
-    display: none;
-}
+
 
 div#resultado{
-    width: 150px;
+    width: 70px;
     display: inline-block;
 }
 
 div#resultado2{
     display: inline-block;
+    max-width: 250px;
+    min-width: 100px;
+}
+
+div#resultado2 img{
+    max-width: 250px;
+    min-width: 100px;
 }
 
 select{

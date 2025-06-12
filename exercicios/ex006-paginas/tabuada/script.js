@@ -8,9 +8,7 @@ function verificar(){
     // Criação e configuração da imagem
     let imagem = document.createElement('img')
     imagem.setAttribute('src','professor.png')
-    imagem.style.width = '250px'
     imagem.style.transform = 'scaleX(-1)'
-    imagem.style.paddingRight = '45px'
 
     // Validação simples
     if (numero.value.length == 0){
