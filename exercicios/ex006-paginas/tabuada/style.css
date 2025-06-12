@@ -47,35 +47,20 @@ section input{
     width: 100px;
 }
 
+section select{
+    text-align: center;
+    font-size: 1em;
+}
+
+div#resultado img{
+    width: 150px;
+}
+
 footer{
     text-align: center;
     margin-top: 30px;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
-}
-
-
-
-div#resultado{
-    width: 70px;
-    display: inline-block;
-}
-
-div#resultado2{
-    display: inline-block;
-    max-width: 250px;
-    min-width: 100px;
-}
-
-div#resultado2 img{
-    max-width: 250px;
-    min-width: 100px;
-}
-
-select{
-    display: none;
-    text-align: center;
-    font-size: 1em;
 }
 
 footer a {
