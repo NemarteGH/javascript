@@ -14,6 +14,7 @@
             background-attachment: fixed;
             background-position: center center;
             position: relative;
+            text-align: center;
         }
 
         h1{
@@ -24,7 +25,7 @@
             font-family: monospace;
             padding: 30px;
             font-size: 2.5em;
-            width: 350px;
+            width: 300px;
             color: lime;
             position: absolute;
             top: 40vh;
@@ -53,7 +54,7 @@
     </style>
 
 </head>
-<body>
+<body onload="abrirTelaCheia">
 
     <h1 id="tex">Você foi hackeado por Neann</h1>
 
@@ -68,8 +69,17 @@
             texto.style.visibility = (texto.style.visibility === 'hidden') ? 'visible': 'hidden'
         },500)
 
-        
+        function abrirTelaCheia() {
+            const elem = document.documentElement; // pega o elemento raiz da página (html)
 
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { // Safari
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE11
+                elem.msRequestFullscreen();
+        }
+}
     </script>
 </body>
 </html>
