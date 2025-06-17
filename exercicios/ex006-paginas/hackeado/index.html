@@ -2,59 +2,55 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Hackeado</title>
 
     <style>
         
         body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
             background-image: url(hackeado.gif);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center center;
-            position: relative;
-            text-align: center;
         }
 
         h1{
-        
             background-color: rgba(0, 0, 0, 0.897);
             border: 2px dashed green;
             text-align: center;
             font-family: monospace;
             padding: 30px;
             font-size: 2.5em;
-            width: 300px;
+            width: 80%;
             color: lime;
-            position: absolute;
-            top: 40vh;
-            left: 50vw;
-            transform: translate(-50%, -50%);
-            
+            position: static;
+            margin-bottom: 200px;
         }
 
         div{
             color: rgb(255, 255, 255);
-            position: absolute;
-            top: 70vh;
-            left: 50vw;
-            transform: translate(-50%, -50%);
             font-size: 1.5em;
             background-color: rgb(158, 0, 0);
-            padding-left: 15px;
-            padding-right: 15px;
             font-family: Arial, Helvetica, sans-serif;
             border: 3px inset black;
             text-align: center;
-            width: 350px;
+            width: 80%;
             font-weight: bold;
-            
+            position: static;
         }
     </style>
 
 </head>
-<body onload="abrirTelaCheia">
+<body onload="abrirTelaCheia()">
 
     <h1 id="tex">Você foi hackeado por Neann</h1>
 
@@ -78,8 +74,9 @@
                 elem.webkitRequestFullscreen();
             } else if (elem.msRequestFullscreen) { // IE11
                 elem.msRequestFullscreen();
+            }
         }
-}
+
     </script>
 </body>
 </html>
