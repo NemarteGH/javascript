@@ -46,36 +46,41 @@
             width: 80%;
             font-weight: bold;
             position: static;
+            text-shadow: 1px 1px 5px black;
         }
+
+       
     </style>
 
 </head>
-<body onload="abrirTelaCheia()">
+<body>
 
     <h1 id="tex">Você foi hackeado por Neann</h1>
 
     <div>
-        <p>Explodindo bateria em: 10s</p>
+        <p id="aviso">Explodindo bateria em: <time id="temp" datetime=""></time>s</p>
     </div>
     
     <script>
 
         const texto = document.getElementById('tex')
+        var tempo = document.getElementById('temp')
+        var limite = 10
+
+        tempo.innerHTML  = limite
+        
         setInterval(() => {
             texto.style.visibility = (texto.style.visibility === 'hidden') ? 'visible': 'hidden'
         },500)
-
-        function abrirTelaCheia() {
-            const elem = document.documentElement; // pega o elemento raiz da página (html)
-
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { // Safari
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { // IE11
-                elem.msRequestFullscreen();
+        
+        const inter = setInterval(() =>{
+            limite = limite - 1
+            tempo.innerHTML = limite
+            if (limite == 0){
+                clearInterval(inter)
+                document.getElementById('aviso').innerHTML = 'Jamais leia um código QR sem saber o que é!'
             }
-        }
+        },1000)
 
     </script>
 </body>
