@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackeado</title>
+
+    <style>
+        
+        body{
+            background-image: url(hackeado.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            position: relative;
+        }
+
+        h1{
+        
+            background-color: rgba(0, 0, 0, 0.897);
+            border: 2px dashed green;
+            text-align: center;
+            font-family: monospace;
+            padding: 30px;
+            color: lime;
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        div{
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 65vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+            font-size: larger;
+            background-color: rgb(158, 0, 0);
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 3px inset black;
+            
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 id="tex">Você foi hackeado por Neann</h1>
+
+    <div>
+        <p>Explodindo bateria em: 10s</p>
+    </div>
+    
+    <script>
+
+        const texto = document.getElementById('tex')
+        setInterval(() => {
+            texto.style.visibility = (texto.style.visibility === 'hidden') ? 'visible': 'hidden'
+        },500)
+
+        
+
+    </script>
+</body>
+</html>
